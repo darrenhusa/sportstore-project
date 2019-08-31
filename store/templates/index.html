@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Sportstore Home</title>
-  </head>
-<body>
-  <h1>Hello world</h1>
+{% extends "base_generic.html" %}
 
+{% block content %}
+  <h1>Sportstore Home</h1>
+  <p>Welcome to Sportstore!</p>
+  <h2>Dynamic content</h2>
   <p>The store has the following record counts:</p>
   <ul>
     <li><strong>Products:</strong> {{ num_products }}</li>
   </ul>
-  <p>The products are:</p>
-  <ul>
-  {% for product in products %}
-    <li>{{ product.name}}, {{ product.description}}, {{ product.price}}</li>
-  {% endfor %}
-  </ul>
-</body>
-</html>
+{% endblock %}
