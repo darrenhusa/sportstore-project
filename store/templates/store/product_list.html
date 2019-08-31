@@ -12,8 +12,11 @@
       </thead>
       <tbody>
         {% for product in product_list %}
-          <td>{{ product.name }}</td><td>{{product.description}}</td><td>{{product.price}}</td>
+          <tr>
+            <td>{{ product.name }}</td><td>{{product.description}}</td><td>{{product.price}}</td>
+          </tr>
         {% endfor %}
+
       </tbody>
     {% else %}
       <p>There are no products in the store.</p>

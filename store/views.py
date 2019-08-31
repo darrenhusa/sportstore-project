@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 from store.models import Product
 
@@ -25,3 +27,17 @@ class ProductListView(generic.ListView):
 
 class ProductDetailView(generic.DetailView):
     model = Product
+
+class ProductCreate(CreateView):
+    model = Product
+    fields = '__all__'
+    # initial = {'date_of_death': '05/01/2018'}
+
+class ProductUpdate(UpdateView):
+    model = Product
+    fields = '__all__'
+    # fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
+
+class ProductDelete(DeleteView):
+    model = Product
+    success_url = reverse_lazy('products')
