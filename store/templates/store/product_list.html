@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sportstore Products List</title>
+  </head>
+<body>
+  <h1>Product List</h1>
+    {% if product_list %}
+    <table>
+      <thead>
+        <th>Name</th><th>Description</th><th>Price</th>
+      </thead>
+      <tbody>
+        {% for product in product_list %}
+          <td>{{ product.name }}</td><td>{{product.description}}</td><td>{{product.price}}</td>
+        {% endfor %}
+      </tbody>
+    {% else %}
+      <p>There are no products in the store.</p>
+    {% endif %}
+</body>
+</html>
