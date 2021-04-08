@@ -1,6 +1,6 @@
 certifi==2019.6.16
 coverage==4.5.4
-Django==2.2.4
+Django==2.2.20
 pytz==2019.2
 sqlparse==0.3.0
 wincertstore==0.2
